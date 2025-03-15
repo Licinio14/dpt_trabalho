@@ -23,8 +23,11 @@ public class LoginController {
      * @param passwordInput (string)
      * @return type of user if exist or "ERROR" if don't exist
      */
-    public String accessType(String usernameInput, String passwordInput){
+    public String accessType(String usernameInput, String passwordInput) throws FileNotFoundException {
         String accessType = "ERROR";
+
+        //apdate with new repository
+        this.userRepository = new UserRepository();
 
         //search for the same user and password
         for (User currentUser: this.userRepository.getUserList()){
