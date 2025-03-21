@@ -36,7 +36,7 @@ public class EngineerController {
         // created a temp array to not afet the main one
         ArrayList<Atracoes> tempList = new ArrayList<Atracoes>();
 
-        // copi the main to the temp array
+        // copy the main to the temp array
         tempList.addAll(this.atracoesRepository.getAtracoesList());
 
         // created int array to keep the last sold tickets in the same order the attractions id (0 stay empty)
